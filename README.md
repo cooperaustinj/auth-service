@@ -1,4 +1,4 @@
-## Running
+## Local development + Running Locally
 
 1. Run `./init.sh`
 
@@ -9,7 +9,7 @@ or
 1. `docker-compose up` or `docker-compose up -d`
 1. `knex seed:run --specific initialize_acme.js`
 
-Go to `http://localhost:3009` and enjoy.
+Go to `http://localhost:3009` and enjoy. The source code is mounted in the containers, and the servers restart when the source changes.
 
 ## Query Database
 
