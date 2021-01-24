@@ -12,9 +12,25 @@ services:
 
     auth_service:
         build: .
+        environment:
+            DATABASE_URL: postgres://auth_user:auth_user_password@db:5432/local_auth_service
         volumes:
             - .:/usr/auth_service
+            - /usr/auth_service/node_modules
         ports:
             - 3000:3000
+            - 9229:9229
         depends_on:
             - db
+
+    example_consumer:
+        build:
+            context: example-consumer
+        volumes:
+            - ./example-consumer:/usr/example_consumer
+            - /usr/example_consumer/node_modules
+        ports:
+            - 3009:3009
+        depends_on:
+            - db
+            - auth_service
