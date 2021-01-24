@@ -1,0 +1,9 @@
+Auth Service:
+    ☐ Login page
+    ☐ Registration page
+    ☐ Entities: company, application, user
+    ☐ Access keys for consumer
+    ☐ Session
+    ☐ Password reset page
+    ☐ Password reset flow (email crap 😒)
+    
